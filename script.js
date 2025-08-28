@@ -1,24 +1,18 @@
-function showPage(pageId) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"))
-  document.getElementById(pageId).classList.add("active")
-}
+const danaBtn = document.getElementById('dana-btn');
+const gopayBtn = document.getElementById('gopay-btn');
+const qrisBtn = document.getElementById('qris-btn');
 
-function addTransaction(method) {
-  const table = document.getElementById("transactionTable").querySelector("tbody")
-  const row = document.createElement("tr")
+danaBtn.addEventListener('click', () => {
+  console.log('Dana button clicked');
+  // Tambahkan kode untuk memproses pembayaran Dana
+});
 
-  const id = "TX-" + Math.floor(Math.random() * 1000000)
-  const status = "Menunggu Pembayaran"
-  const date = new Date().toLocaleString("id-ID")
+gopayBtn.addEventListener('click', () => {
+  console.log('GO-PAY button clicked');
+  // Tambahkan kode untuk memproses pembayaran GO-PAY
+});
 
-  row.innerHTML = `
-    <td>${id}</td>
-    <td>${method}</td>
-    <td style="color:orange">${status}</td>
-    <td>${date}</td>
-  `
-  table.appendChild(row)
-
-  alert("Transaksi via " + method + " berhasil dibuat!\nCek menu Transaksi.")
-  showPage("transaksi")
-        }
+qrisBtn.addEventListener('click', () => {
+  console.log('QRIS button clicked');
+  // Tambahkan kode untuk memproses pembayaran QRIS
+});
