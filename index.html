@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NezhaPayment👻 - Payment Gateway</title>
+  <title>NezhaPayment👻</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,6 @@
       <li><a href="#" onclick="showPage('home')">Home</a></li>
       <li><a href="#" onclick="showPage('payment')">Payment</a></li>
       <li><a href="#" onclick="showPage('transaksi')">Transaksi</a></li>
-      <li><a href="#" onclick="showPage('admin')">Admin</a></li>
     </ul>
   </nav>
 
@@ -23,7 +22,7 @@
     <!-- Home -->
     <section id="home" class="page active">
       <h2>Selamat Datang di NezhaPayment👻</h2>
-      <p>Website Payment Gateway Sangar & Modern 🚀</p>
+      <p>Website Payment Minimalis, Aman & Terpercaya 🚀</p>
     </section>
 
     <!-- Payment -->
@@ -32,9 +31,47 @@
       <div class="grid">
         <div class="card" onclick="addTransaction('Dana')">
           <h3>Dana</h3>
-          <button>Bayar via Dana</button>
+          <p>No: <b>0812-3456-7890</b></p>
         </div>
         <div class="card" onclick="addTransaction('OVO')">
+          <h3>OVO</h3>
+          <p>No: <b>0812-9876-5432</b></p>
+        </div>
+        <div class="card" onclick="addTransaction('GoPay')">
+          <h3>GoPay</h3>
+          <p>No: <b>0856-1122-3344</b></p>
+        </div>
+        <div class="card" onclick="addTransaction('QRIS')">
+          <h3>QRIS</h3>
+          <img src="img/qris.png" alt="QRIS" class="qris">
+        </div>
+      </div>
+    </section>
+
+    <!-- Transaksi -->
+    <section id="transaksi" class="page">
+      <h2>📑 Riwayat Transaksi</h2>
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Metode</th>
+            <th>Status</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p> NezhaPayment👻 © 2025 - Aman & Terpercaya</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+                                    </html>        <div class="card" onclick="addTransaction('OVO')">
           <h3>OVO</h3>
           <button>Bayar via OVO</button>
         </div>
