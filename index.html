@@ -1,112 +1,26 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NezhaPayment👻</title>
+  <title>Payment Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <h1 class="logo">NezhaPayment👻</h1>
-    <ul>
-      <li><a href="#" onclick="showPage('home')">Home</a></li>
-      <li><a href="#" onclick="showPage('payment')">Payment</a></li>
-      <li><a href="#" onclick="showPage('transaksi')">Transaksi</a></li>
-    </ul>
-  </nav>
-
-  <!-- Content -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <h1>Pembayaran</h1>
+  </header>
   <main>
-    <!-- Home -->
-    <section id="home" class="page active">
-      <h2>Selamat Datang di NezhaPayment👻</h2>
-      <p>Website Payment Minimalis, Aman & Terpercaya 🚀</p>
-    </section>
-
-    <!-- Payment -->
-    <section id="payment" class="page">
+    <div class="payment-method">
       <h2>Pilih Metode Pembayaran</h2>
-      <div class="grid">
-        <div class="card" onclick="addTransaction('Dana')">
-          <h3>Dana</h3>
-          <p>No: <b>0812-3456-7890</b></p>
-        </div>
-        <div class="card" onclick="addTransaction('OVO')">
-          <h3>OVO</h3>
-          <p>No: <b>0812-9876-5432</b></p>
-        </div>
-        <div class="card" onclick="addTransaction('GoPay')">
-          <h3>GoPay</h3>
-          <p>No: <b>0856-1122-3344</b></p>
-        </div>
-        <div class="card" onclick="addTransaction('QRIS')">
-          <h3>QRIS</h3>
-          <img src="img/qris.png" alt="QRIS" class="qris">
-        </div>
-      </div>
-    </section>
-
-    <!-- Transaksi -->
-    <section id="transaksi" class="page">
-      <h2>📑 Riwayat Transaksi</h2>
-      <table id="transactionTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Metode</th>
-            <th>Status</th>
-            <th>Tanggal</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
+      <button id="dana-btn">Dana</button>
+      <button id="gopay-btn">GO-PAY</button>
+      <button id="qris-btn">QRIS</button>
+    </div>
   </main>
-
-  <footer>
-    <p> NezhaPayment👻 © 2025 - Aman & Terpercaya</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-                                    </html>        <div class="card" onclick="addTransaction('OVO')">
-          <h3>OVO</h3>
-          <button>Bayar via OVO</button>
-        </div>
-        <div class="card" onclick="addTransaction('Gopay')">
-          <h3>Gopay</h3>
-          <button>Bayar via Gopay</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Transaksi -->
-    <section id="transaksi" class="page">
-      <h2>📑 Riwayat Transaksi</h2>
-      <table id="transactionTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Metode</th>
-            <th>Status</th>
-            <th>Tanggal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- transaksi otomatis masuk sini -->
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Admin -->
-    <section id="admin" class="page">
-      <h2>📊 Dashboard Admin</h2>
-      <p>Daftar transaksi akan tampil di menu Transaksi.</p>
-    </section>
-  </main>
-
   <script src="script.js"></script>
 </body>
 </html>
