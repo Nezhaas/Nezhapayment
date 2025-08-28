@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000, #111, #000);
+  font-family: 'Arial', sans-serif;
+  background: #0a0a0a;
   color: white;
 }
 
@@ -11,30 +11,92 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0,0,0,0.8);
+  background: #111;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
 .logo {
   color: cyan;
   font-weight: bold;
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 .navbar ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
 .navbar ul li a:hover {
+  color: cyan;
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: 40px;
+}
+.page.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 20px;
+}
+.card {
+  background: #111;
+  border: 1px solid cyan;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(0,255,255,0.05);
+}
+.qris {
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table th, table td {
+  border: 1px solid cyan;
+  padding: 10px;
+  text-align: center;
+}
+table th {
+  background: rgba(0,255,255,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: gray;
+  margin-top: 40px;
+  font-size: 14px;
+  }.navbar ul li a:hover {
   color: cyan;
 }
 
