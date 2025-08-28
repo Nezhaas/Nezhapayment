@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NezhaPayment👻 - Payment Gateway</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">NezhaPayment👻</h1>
+    <ul>
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('payment')">Payment</a></li>
+      <li><a href="#" onclick="showPage('transaksi')">Transaksi</a></li>
+      <li><a href="#" onclick="showPage('admin')">Admin</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="page active">
+      <h2>Selamat Datang di NezhaPayment👻</h2>
+      <p>Website Payment Gateway Sangar & Modern 🚀</p>
+    </section>
+
+    <!-- Payment -->
+    <section id="payment" class="page">
+      <h2>Pilih Metode Pembayaran</h2>
+      <div class="grid">
+        <div class="card" onclick="addTransaction('Dana')">
+          <h3>Dana</h3>
+          <button>Bayar via Dana</button>
+        </div>
+        <div class="card" onclick="addTransaction('OVO')">
+          <h3>OVO</h3>
+          <button>Bayar via OVO</button>
+        </div>
+        <div class="card" onclick="addTransaction('Gopay')">
+          <h3>Gopay</h3>
+          <button>Bayar via Gopay</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transaksi -->
+    <section id="transaksi" class="page">
+      <h2>📑 Riwayat Transaksi</h2>
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Metode</th>
+            <th>Status</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- transaksi otomatis masuk sini -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Admin -->
+    <section id="admin" class="page">
+      <h2>📊 Dashboard Admin</h2>
+      <p>Daftar transaksi akan tampil di menu Transaksi.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
