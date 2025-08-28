@@ -1,10 +1,8 @@
-// Ganti halaman
 function showPage(pageId) {
   document.querySelectorAll(".page").forEach(p => p.classList.remove("active"))
   document.getElementById(pageId).classList.add("active")
 }
 
-// Tambah transaksi dummy
 function addTransaction(method) {
   const table = document.getElementById("transactionTable").querySelector("tbody")
   const row = document.createElement("tr")
@@ -21,6 +19,6 @@ function addTransaction(method) {
   `
   table.appendChild(row)
 
-  alert("Transaksi berhasil dibuat dengan metode " + method + "!\nCek menu Transaksi.")
+  alert("Transaksi via " + method + " berhasil dibuat!\nCek menu Transaksi.")
   showPage("transaksi")
-}
+        }
